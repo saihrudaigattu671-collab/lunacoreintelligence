@@ -1,37 +1,123 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import React from 'react'
+import { ArrowUpRight } from 'lucide-react'
 
-const markUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-mC6zYjMsQD0IdDG0ONBikoVVeYm0VG.png'
-const lockupUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/website-logo-TgGFqvYfxX7k1mROoWqI3lUy2E6pRc.png'
-const links = [{ href: '/', label: 'Home' }, { href: '/features', label: 'Features' }, { href: '/pricing', label: 'Pricing' }, { href: '/contact', label: 'Demo' }, { href: '/contact', label: 'Contact Us' }]
-
-export function Logo() { return <Link href="/" className="logo" aria-label="Lunacore Intelligence home"><img src={markUrl} alt="Lunacore Intelligence mark" /><span>LUNACORE</span></Link> }
+// Local assets stored in public/ folder (Zero Vercel dependencies)
+export const markUrl = '/logo-mark.png'
+export const lockupUrl = '/website-graphic.png'
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false)
-  return <header className="site-header"><div className="shell nav-row"><Logo /><nav className="desktop-nav" aria-label="Main navigation">{links.map((link) => <Link key={`${link.href}-${link.label}`} href={link.href}>{link.label}</Link>)}<Link href="/contact" className="nav-cta">Book Demo <ArrowUpRight size={15} /></Link></nav><button className="menu-button" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button></div>{open && <nav className="mobile-nav shell" aria-label="Mobile navigation">{links.map((link) => <Link onClick={() => setOpen(false)} key={`${link.href}-${link.label}`} href={link.href}>{link.label}</Link>)}<Link onClick={() => setOpen(false)} href="/contact" className="button button-gradient">Book Demo <ArrowUpRight size={15} /></Link></nav>}</header>
+  return (
+    <header className="site-header">
+      <div className="shell nav-row">
+        <Link href="/" className="logo-container">
+          <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
+          <span style={{ fontWeight: 600, fontSize: '1.125rem' }}>Lunacore</span>
+        </Link>
+
+        <nav className="desktop-nav">
+          <Link href="/" className="nav-link">Home</Link>
+          <Link href="/features" className="nav-link">Features</Link>
+          <Link href="/pricing" className="nav-link">Pricing</Link>
+          <Link href="/security" className="nav-link">Security</Link>
+        </nav>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <Link href="/contact" className="btn-primary">
+            Request Demo <ArrowUpRight size={16} />
+          </Link>
+        </div>
+      </div>
+    </header>
+  )
 }
 
-export function SiteFooter() { return <footer className="site-footer"><div className="shell footer-grid"><div><img className="footer-mark" src={markUrl} alt="Lunacore Intelligence mark" /><p className="footer-note">Autonomous intelligence for<br />ambitious operators.</p></div><div className="footer-links"><div><span className="eyebrow">Explore</span><Link href="/features">Features</Link><Link href="/pricing">Pricing</Link><Link href="/security">Security</Link></div><div><span className="eyebrow">Connect</span><Link href="/contact">Contact Us</Link><a href="mailto:hello@lunacoreintelligence.com">Email us</a></div></div></div><div className="shell footer-bottom"><span>© 2026 Lunacore Intelligence</span><span>Built for clarity.</span></div></footer> }
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div className="shell footer-grid">
+        <div>
+          <div className="logo-container" style={{ marginBottom: '1rem' }}>
+            <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
+            <span style={{ fontWeight: 600 }}>Lunacore Intelligence</span>
+          </div>
+          <p style={{ maxWidth: '300px', fontSize: '0.875rem' }}>
+            Building customized AI assistants tailored directly to your business rules and workflows.
+          </p>
+        </div>
 
-export function SiteShell({ children }: { children: React.ReactNode }) { return <><SiteHeader />{children}<SiteFooter /></> }
-export function ArrowLink({ href, children, dark = false, gradient = false }: { href: string; children: React.ReactNode; dark?: boolean; gradient?: boolean }) { return <Link href={href} className={`button ${gradient ? 'button-gradient' : dark ? 'button-dark' : 'button-light'}`}>{children}<ArrowUpRight size={16} /></Link> }
-export function SectionLabel({ children }: { children: React.ReactNode }) { return <span className="eyebrow">{children}</span> }
-export function IntelligenceVisual() { return <div className="intelligence-visual" aria-label="Lunacore connected intelligence system" role="img"><div className="visual-top"><span>LIVE INTELLIGENCE SYSTEM</span><span className="live-dot" /></div><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="core"><span>LC</span><small>INTELLIGENCE</small></div><div className="node node-a">SIGNALS<span>342</span></div><div className="node node-b">DECISIONS<span>18</span></div><div className="node node-c">OUTCOMES<span>+28%</span></div><div className="visual-footer"><span>LAST SYNC</span><strong>JUST NOW</strong></div></div> }
-export function PageIntro({ kicker, title, body }: { kicker: string; title: string; body: string }) { return <section className="page-intro shell"><SectionLabel>{kicker}</SectionLabel><h1>{title}</h1><p>{body}</p></section> }
-export function CtaBand({ title = 'Make your business move with intelligence.' }: { title?: string }) { return <section className="cta-band"><div className="shell cta-inner"><SectionLabel>Ready when you are</SectionLabel><h2>{title}</h2><ArrowLink href="/contact" gradient>Book a Demo</ArrowLink></div></section> }
-export function FeatureCard({ number, title, children }: { number: string; title: string; children: React.ReactNode }) { return <article className="feature-card"><span className="card-number">{number}</span><h3>{title}</h3><p>{children}</p></article> }
-export function Metric({ value, label }: { value: string; label: string }) { return <div className="metric"><strong>{value}</strong><span>{label}</span></div> }
-export function ContactForm() { const [status, setStatus] = useState<'idle'|'sending'|'success'|'error'>('idle'); async function submit(event: React.FormEvent<HTMLFormElement>) { event.preventDefault(); setStatus('sending'); try { const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(event.currentTarget), headers: { Accept: 'application/json' } }); if (!response.ok) throw new Error('Failed'); event.currentTarget.reset(); setStatus('success') } catch { setStatus('error') } } return <form className="contact-form" onSubmit={submit}><input type="hidden" name="access_key" value="835c4b5e-2686-4402-bd95-7c34b103d90e" /><input type="hidden" name="subject" value="New Lunacore Business Demo Request" /><label>Full name<input required name="name" placeholder="e.g. Rahul Sharma" /></label><label>Business email<input required type="email" name="email" placeholder="you@company.com" /></label><label>Phone / WhatsApp<input required type="tel" name="phone" placeholder="+91 98765 43210" /></label><label>Company / business name<input required name="company" placeholder="Your company" /></label><label>What processes would you like the AI to handle?<textarea name="message" rows={4} placeholder="Tell us about the workflows you want to improve." /></label><button className="button button-gradient" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Request your 7-day demo'}<ArrowUpRight size={16} /></button><p className="form-trust">We analyze your business rules first. No credit card required.</p>{status === 'success' && <p className="form-success">Thanks — we’ll be in touch shortly.</p>}{status === 'error' && <p className="form-error">Something went wrong. Please email us directly.</p>}</form> }
-export function LogoCloud() { return <div className="logo-cloud"><span>Powering decisions for modern teams</span><strong>ORBIT</strong><strong>NEXORA</strong><strong>VANTAGE</strong><strong>NORTHSTAR</strong></div> }
-export function DataTable() { return <div className="data-table"><div className="table-head"><span>Signal</span><span>Confidence</span><span>Movement</span></div>{[['Customer retention','92%','↑ 18%'],['Pipeline velocity','87%','↑ 24%'],['Operating margin','78%','↑ 9%']].map(([a,b,c]) => <div className="table-row" key={a}><span>{a}</span><span>{b}</span><strong>{c}</strong></div>)}</div> }
-export function GridVisual() { return <div className="grid-visual"><div className="grid-visual-head"><span>EXECUTIVE BRIEF / 06.26</span><span>01—03</span></div><h3>What matters<br /><em>now.</em></h3><div className="signal-lines"><span /><span /><span /><span /></div><div className="grid-visual-foot"><span>03 PRIORITIES IDENTIFIED</span><strong>→</strong></div></div> }
-export function CheckList({ items }: { items: string[] }) { return <ul className="check-list">{items.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul> }
-export const footerLinks = links
-export function MobileOnly() { return null }
-export { X }
+        <div>
+          <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Product</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Link href="/features" className="nav-link">Workflows</Link>
+            <Link href="/pricing" className="nav-link">Pricing Plans</Link>
+            <Link href="/security" className="nav-link">Data Protection</Link>
+          </div>
+        </div>
 
-export { lockupUrl }
+        <div>
+          <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Company</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Link href="/contact" className="nav-link">Book Demo</Link>
+            <Link href="/security" className="nav-link">Safety Standards</Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="shell footer-bottom">
+        <span>© {new Date().getFullYear()} Lunacore Intelligence. All rights reserved.</span>
+        <span>Custom AI Workforce Solutions</span>
+      </div>
+    </footer>
+  )
+}
+
+export function SiteShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </div>
+  )
+}
+
+// Local interactive resolution chart
+export function WeeklyPerformanceChart() {
+  return (
+    <div className="chart-card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <div>
+          <h3 style={{ fontSize: '1rem' }}>Weekly Resolution Rate</h3>
+          <p style={{ fontSize: '0.8125rem' }}>Automated Customer Tasks Handled</p>
+        </div>
+        <span style={{ color: 'var(--success)', fontWeight: 600, fontSize: '0.875rem' }}>94.2% Auto-Resolved</span>
+      </div>
+
+      <div className="bar-chart-container">
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '50%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Mon</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '65%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tue</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '80%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Wed</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar highlight" style={{ height: '95%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Thu</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '75%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Fri</span>
+        </div>
+      </div>
+    </div>
+  )
+}
