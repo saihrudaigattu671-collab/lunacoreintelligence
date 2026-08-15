@@ -1,113 +1,149 @@
+// app/pricing/page.tsx
 import Link from 'next/link'
 import { SiteShell } from '@/components/site-shell'
-import { Check, ArrowRight, Shield } from 'lucide-react'
 
 export default function PricingPage() {
+  const plans = [
+    {
+      name: 'Tier 1: Informative Bot',
+      price: '₹5,000',
+      period: '/ month',
+      setup: '+ ₹10,000 One-Time Setup',
+      description: 'Small businesses and startups needing 24/7 basic lead capture and standard FAQ handling.',
+      features: [
+        'Single Informative AI Agent',
+        'Dynamic Website Chat Widget',
+        'Instant Email Notifications',
+        'Standard Knowledge Base Ingestion',
+        'Monthly Performance Summary',
+      ],
+      popular: false,
+    },
+    {
+      name: 'Tier 2: Autonomous Support',
+      price: '₹12,000',
+      period: '/ month',
+      setup: '+ ₹10,000 One-Time Setup',
+      description: 'Mid-size businesses seeking 100% automated support with 0 human staff required.',
+      features: [
+        'Multi-Agent Collaborative Framework',
+        'Tool & API Integrations (Calendar, Webhooks)',
+        'Custom Dynamic Knowledge Base',
+        '📊 Weekly Performance & SLA Report',
+        '⚠️ Weekly Customer Friction & Issues Report',
+      ],
+      popular: true,
+    },
+    {
+      name: 'Tier 3: Hybrid Support',
+      price: '₹30,000',
+      period: '/ month',
+      setup: '+ ₹10,000 One-Time Setup',
+      description: 'Growing support teams requiring full AI automation with live human takeover capabilities.',
+      features: [
+        'Everything in Tier 2',
+        '1 Human Agent Workspace Seat',
+        'Context-Preserving Handoff',
+        'Human SLA Escalation Triggers',
+        'Multi-Channel Handoff Support',
+      ],
+      popular: false,
+    },
+    {
+      name: 'Tier 4: Full AI Workforce',
+      price: '₹60,000',
+      period: '/ month',
+      setup: '+ ₹10,000 One-Time Setup',
+      description: 'Established operations needing enterprise workflows and deep Zoho/Deluge engineering.',
+      features: [
+        'Everything in Tier 3',
+        '2 Human Agent Workspace Seats',
+        'Zoho CRM & Deluge Workflow Engineering',
+        'Custom API & Complex Webhook Builds',
+        'Dedicated Automation Engineer',
+        'Priority SLA Support',
+      ],
+      popular: false,
+    },
+  ]
+
   return (
     <SiteShell>
-      <main>
-        {/* Header */}
-        <section className="shell" style={{ padding: '4rem 1.5rem 2rem', textAlign: 'center', maxWidth: '700px' }}>
-          <h1>Simple, Transparent Pricing</h1>
-          <p style={{ marginTop: '0.75rem', fontSize: '1.125rem' }}>
-            Start with a 7-day custom trial. Upgrade to dedicated managed plans built around your exact order volumes.
-          </p>
-        </section>
-
-        {/* Pricing Cards */}
-        <section className="section">
-          <div className="shell">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', alignItems: 'stretch' }}>
-              
-              {/* Starter Plan */}
-              <div style={{ background: 'var(--bg-card)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem' }}>Starter</h3>
-                  <p style={{ fontSize: '0.875rem', margin: '0.5rem 0 1.5rem' }}>Ideal for growing businesses testing automated operations.</p>
-                  <div style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.25rem' }}>
-                    ₹24,999 <span style={{ fontSize: '0.875rem', fontWeight: 400, color: 'var(--text-muted)' }}>/ month</span>
-                  </div>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '1.5rem' }}>+ 18% GST • One-time setup fee applies</span>
-
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0 }}>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Up to 1,000 automated tasks/mo</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> 1 Custom business workflow</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Email & Webchat integration</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Standard manager approval limits</li>
-                  </ul>
-                </div>
-
-                <Link href="/contact" className="btn-secondary" style={{ marginTop: '2rem', textAlign: 'center', width: '100%', justifyContent: 'center' }}>
-                  Start 7-Day Trial
-                </Link>
-              </div>
-
-              {/* Growth Plan (Highlighted) */}
-              <div style={{ background: 'var(--bg-card)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--primary)', position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--primary)', color: '#fff', fontSize: '0.75rem', padding: '0.25rem 0.75rem', borderRadius: '12px', fontWeight: 600 }}>
-                  MOST POPULAR
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem' }}>Growth</h3>
-                  <p style={{ fontSize: '0.875rem', margin: '0.5rem 0 1.5rem' }}>For scaling brands requiring multi-channel automation.</p>
-                  <div style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.25rem' }}>
-                    ₹49,999 <span style={{ fontSize: '0.875rem', fontWeight: 400, color: 'var(--text-muted)' }}>/ month</span>
-                  </div>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '1.5rem' }}>+ 18% GST • Free initial sandbox setup</span>
-
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0 }}>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Up to 5,000 automated tasks/mo</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> 3 Custom business workflows</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> WhatsApp, Email & Webchat</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> 1-Click manager escalation dashboard</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Weekly executive reporting</li>
-                  </ul>
-                </div>
-
-                <Link href="/contact" className="btn-primary" style={{ marginTop: '2rem', textAlign: 'center', width: '100%', justifyContent: 'center' }}>
-                  Request Growth Demo <ArrowRight size={16} />
-                </Link>
-              </div>
-
-              {/* Custom Enterprise Plan */}
-              <div style={{ background: 'var(--bg-card)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem' }}>Enterprise</h3>
-                  <p style={{ fontSize: '0.875rem', margin: '0.5rem 0 1.5rem' }}>Custom SLAs, dedicated servers, and tailor-made workflows.</p>
-                  <div style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.25rem' }}>
-                    Custom Quote
-                  </div>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '1.5rem' }}>Billed annually or quarterly</span>
-
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0 }}>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Unlimited automated volume</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Unlimited custom integrations</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> Dedicated account manager</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)' }} /> On-premise or isolated cloud deployment</li>
-                  </ul>
-                </div>
-
-                <Link href="/contact" className="btn-secondary" style={{ marginTop: '2rem', textAlign: 'center', width: '100%', justifyContent: 'center' }}>
-                  Contact Sales
-                </Link>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* Financial Disclosures Notice */}
-        <section className="section" style={{ background: 'var(--bg-secondary)', padding: '3rem 0' }}>
-          <div className="shell" style={{ textAlign: 'center', maxWidth: '650px' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.75rem', color: 'var(--text-accent)' }}>
-              <Shield size={24} />
-            </div>
-            <h3 style={{ fontSize: '1.125rem', marginBottom: '0.5rem' }}>7-Day Trial Terms</h3>
-            <p style={{ fontSize: '0.875rem' }}>
-              Your initial 7-day sandbox trial is completely free with zero credit card required. Applicable taxes (+18% GST) and one-time initial integration fees are presented in your custom proposal prior to live deployment.
+      <main className="section">
+        <div className="shell" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h1>Executive Pricing Structure</h1>
+            <p style={{ color: '#6b7280', marginTop: '0.5rem' }}>
+              Autonomous AI workforces built for your exact business rules. GST tax invoicing available.
             </p>
           </div>
-        </section>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                style={{
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  borderRadius: '1rem',
+                  border: plan.popular ? '2px solid #000' : '1px solid #e5e7eb',
+                  padding: '1.5rem',
+                  backgroundColor: '#fff',
+                }}
+              >
+                {plan.popular && (
+                  <span style={{
+                    position: 'absolute',
+                    top: '-12px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    backgroundColor: '#000',
+                    color: '#fff',
+                    fontSize: '0.75rem',
+                    padding: '2px 12px',
+                    borderRadius: '9999px',
+                    fontWeight: 600,
+                  }}>
+                    Most Popular
+                  </span>
+                )}
+                <div>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 700 }}>{plan.name}</h3>
+                  <p style={{ fontSize: '0.85rem', color: '#6b7280', marginTop: '0.25rem', minHeight: '45px' }}>
+                    {plan.description}
+                  </p>
+                  
+                  <div style={{ margin: '1.25rem 0 0.5rem 0' }}>
+                    <span style={{ fontSize: '2rem', fontWeight: 800 }}>{plan.price}</span>
+                    <span style={{ color: '#6b7280', fontSize: '0.875rem' }}>{plan.period}</span>
+                  </div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#4b5563', marginBottom: '1.25rem' }}>
+                    {plan.setup}
+                  </div>
+
+                  <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.625rem', fontSize: '0.825rem', color: '#374151' }}>
+                    {plan.features.map((feature, i) => (
+                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                        <span style={{ fontWeight: 700, color: '#000', shrink: 0 }}>✓</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Link
+                  href="/contact"
+                  className={plan.popular ? 'btn-primary' : 'btn-secondary'}
+                  style={{ textAlign: 'center', width: '100%', display: 'block' }}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </SiteShell>
   )
