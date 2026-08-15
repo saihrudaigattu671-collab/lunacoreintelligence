@@ -1,49 +1,22 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Lunacore Intelligence — See the signal. Move with clarity.',
-    template: '%s — Lunacore Intelligence',
-  },
-  description: 'Lunacore turns scattered business data into the few decisions that matter most.',
-  generator: 'Lunacore Intelligence',
+  title: 'Lunacore Intelligence | Custom AI Workforce Systems',
+  description: 'Build an AI workforce customized to your exact business rules, approval limits, and support policies. 7-Day Risk-Free Trial.',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/logo-mark.png',
   },
-}
-
-export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#050816',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className="bg-background">
-      <body className="antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   )
 }
