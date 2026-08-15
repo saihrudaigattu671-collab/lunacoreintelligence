@@ -1,0 +1,4 @@
+import { Mail, MapPin } from 'lucide-react'
+import { ContactForm, PageIntro, SectionLabel, SiteShell } from '@/components/site-shell'
+
+export default function ContactPage() { return <SiteShell><main><PageIntro kicker="Start here" title={<>Let’s make the<br /><em>picture clearer.</em></>} body="Tell us what you’re working through. We’ll come prepared, keep it practical, and see if Lunacore is the right layer for your next chapter." /><section className="section shell contact-layout"><div className="contact-aside"><SectionLabel>We’re listening</SectionLabel><p>Most useful conversations start with a messy question. Bring yours.</p><div className="contact-details"><a href="mailto:hello@lunacoreintelligence.com"><Mail size={18} />hello@lunacoreintelligence.com</a><span><MapPin size={18} />India / Working globally</span></div></div><ContactForm /></section></main></SiteShell> }
