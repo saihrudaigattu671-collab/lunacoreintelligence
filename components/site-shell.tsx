@@ -1,93 +1,140 @@
+'use client'
+
 import Link from 'next/link'
+import React from 'react'
+import { ArrowUpRight } from 'lucide-react'
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+// Local assets stored in public/ folder (Zero Vercel dependencies)
+export const markUrl = '/logo-mark.png'
+export const lockupUrl = '/website-graphic.png'
+
+export function SiteHeader() {
   return (
-    <div className="site-wrapper">
-      <header className="site-header">
-        <div className="shell header-inner">
-          <Link href="/" className="brand-logo">
-            {/* Enlarged logo box */}
-            <div style={{
-              width: '36px',
-              height: '36px',
-              backgroundColor: '#fff',
-              color: '#000',
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 'bold',
-              fontSize: '1.125rem'
-            }}>
-              L
-            </div>
-            <span>Lunacore Intelligence</span>
+    <header className="site-header">
+      <div className="shell nav-row">
+        <Link href="/" className="logo-container">
+          <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
+          <span style={{ fontWeight: 600, fontSize: '1.125rem' }}>Lunacore Intelligence</span>
+        </Link>
+
+        <nav className="desktop-nav">
+          <Link href="/" className="nav-link">Home</Link>
+          <Link href="/features" className="nav-link">Features</Link>
+          <Link href="/pricing" className="nav-link">Pricing</Link>
+          <Link href="/security" className="nav-link">Security</Link>
+        </nav>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <Link href="/contact" className="btn-primary">
+            Request Demo <ArrowUpRight size={16} />
           </Link>
-
-          <nav className="site-nav">
-            <Link href="/features">Features</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/security">Security</Link>
-            <Link href="/contact" className="btn-primary-sm">Book Demo</Link>
-          </nav>
         </div>
-      </header>
+      </div>
+    </header>
+  )
+}
 
-      {children}
-
-      <footer className="site-footer">
-        <div className="shell footer-grid">
-          <div>
-            <h3>Lunacore Intelligence</h3>
-            <p style={{ fontSize: '0.875rem', color: 'var(--fg-muted)' }}>
-              Custom AI assistants built around your exact business rules.
-            </p>
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div className="shell footer-grid">
+        <div>
+          <div className="logo-container" style={{ marginBottom: '1rem' }}>
+            <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
+            <span style={{ fontWeight: 600 }}>Lunacore Intelligence</span>
           </div>
+          <p style={{ maxWidth: '300px', fontSize: '0.875rem' }}>
+            Building customized AI assistants tailored directly to your business rules and workflows.
+          </p>
+        </div>
 
-          <div>
-            <h4>Navigation</h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
-              <li><Link href="/features">Features</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/security">Security</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
+        <div>
+          <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Product</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Link href="/features" className="nav-link">Workflows</Link>
+            <Link href="/pricing" className="nav-link">Pricing Plans</Link>
+            <Link href="/security" className="nav-link">Data Protection</Link>
           </div>
+        </div>
 
-          <div>
-            <h4>Office Contact</h4>
-            <p style={{ fontSize: '0.875rem', margin: '0 0 0.5rem 0' }}>
-              <strong>Email:</strong>{' '}
-              <a href="mailto:saihrudaigattu671@gmail.com" style={{ textDecoration: 'underline' }}>
+        <div>
+          <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Company</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Link href="/contact" className="nav-link">Book Demo</Link>
+            <Link href="/security" className="nav-link">Safety Standards</Link>
+          </div>
+        </div>
+
+        <div>
+          <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Office Contact</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
+            <p style={{ margin: 0 }}>
+              Email:{' '}
+              <a href="mailto:saihrudaigattu671@gmail.com" className="nav-link" style={{ display: 'inline' }}>
                 saihrudaigattu671@gmail.com
               </a>
             </p>
-            <p style={{ fontSize: '0.875rem', margin: 0 }}>
-              <strong>Phone:</strong>{' '}
-              <a href="tel:+917674095537" style={{ textDecoration: 'underline' }}>
+            <p style={{ margin: 0 }}>
+              Phone:{' '}
+              <a href="tel:+917674095537" className="nav-link" style={{ display: 'inline' }}>
                 +91 76740 95537
               </a>
             </p>
           </div>
         </div>
-        <div className="footer-bottom">
-          © {new Date().getFullYear()} Lunacore Intelligence. All rights reserved.
-        </div>
-      </footer>
+      </div>
+
+      <div className="shell footer-bottom">
+        <span>© {new Date().getFullYear()} Lunacore Intelligence. All rights reserved.</span>
+        <span>Custom AI Workforce Solutions</span>
+      </div>
+    </footer>
+  )
+}
+
+export function SiteShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
     </div>
   )
 }
 
+// Local interactive resolution chart
 export function WeeklyPerformanceChart() {
   return (
-    <div style={{ padding: '1.5rem', background: 'var(--bg-secondary)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-      <h4 style={{ margin: '0 0 1rem 0', fontSize: '0.875rem', fontWeight: 600 }}>Weekly Resolution Speed</h4>
-      <div style={{ height: '120px', display: 'flex', alignItems: 'flex-end', gap: '8px' }}>
-        <div style={{ height: '40%', width: '100%', background: 'var(--border)', borderRadius: '4px' }}></div>
-        <div style={{ height: '60%', width: '100%', background: 'var(--border)', borderRadius: '4px' }}></div>
-        <div style={{ height: '50%', width: '100%', background: 'var(--border)', borderRadius: '4px' }}></div>
-        <div style={{ height: '85%', width: '100%', background: 'var(--border)', borderRadius: '4px' }}></div>
-        <div style={{ height: '100%', width: '100%', background: 'var(--primary)', borderRadius: '4px' }}></div>
+    <div className="chart-card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <div>
+          <h3 style={{ fontSize: '1rem' }}>Weekly Resolution Rate</h3>
+          <p style={{ fontSize: '0.8125rem' }}>Automated Customer Tasks Handled</p>
+        </div>
+        <span style={{ color: 'var(--success)', fontWeight: 600, fontSize: '0.875rem' }}>94.2% Auto-Resolved</span>
+      </div>
+
+      <div className="bar-chart-container">
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '50%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Mon</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '65%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tue</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '80%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Wed</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar highlight" style={{ height: '95%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Thu</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '75%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Fri</span>
+        </div>
       </div>
     </div>
   )
