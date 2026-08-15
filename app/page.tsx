@@ -1,6 +1,134 @@
-import { ArrowDown, ArrowUpRight } from 'lucide-react'
-import { ArrowLink, CtaBand, DataTable, FeatureCard, GridVisual, LogoCloud, Metric, SectionLabel, SiteShell, lockupUrl } from '@/components/site-shell'
+import Link from 'next/link'
+import { ArrowRight, ShieldCheck, UserCheck, BarChart2, Zap } from 'lucide-react'
+import { SiteShell, WeeklyPerformanceChart } from '@/components/site-shell'
 
 export default function HomePage() {
-  return <SiteShell><main><div className="announcement"><span className="live-dot" />LUNACORE 2.0 IS NOW LIVE <ArrowUpRight size={13} /></div><section className="hero shell"><div className="hero-copy"><SectionLabel>Autonomous intelligence for modern business</SectionLabel><h1>Your AI workforce.<br /><em>Always on. Always learning.</em></h1><p className="hero-lead">Lunacore helps businesses automate operations, understand their data, and make faster, smarter decisions — without adding more complexity.</p><div className="hero-actions"><ArrowLink href="/contact" gradient>Book a Demo</ArrowLink><ArrowLink href="/pricing">View Pricing</ArrowLink></div><div className="hero-meta"><span>BUILT FOR THE NEXT MOVE</span><span>See how it works <ArrowDown size={14} /></span></div></div><img className="hero-lockup" src={lockupUrl} alt="Lunacore Intelligence logo" /></section><LogoCloud /><section className="section shell"><div className="section-heading"><SectionLabel>The intelligence layer</SectionLabel><h2>Less noise.<br /><em>More knowing.</em></h2><p>Lunacore connects the dots between your data, your people, and your next move — so the whole business can operate from the same picture.</p></div><div className="feature-grid"><FeatureCard number="01" title="See the whole picture">Bring finance, growth, operations, and customer signals into one living view.</FeatureCard><FeatureCard number="02" title="Find what matters">Our intelligence layer surfaces the changes worth your attention before they become problems.</FeatureCard><FeatureCard number="03" title="Move with confidence">From executive briefs to weekly priorities, turn insight into aligned action.</FeatureCard></div></section><section className="dark-section"><div className="shell split-section"><div><SectionLabel>Executive reporting</SectionLabel><h2>A sharper view of<br /><em>what comes next.</em></h2><p>Stop spending Monday morning rebuilding the week. Lunacore gives leadership the context, patterns, and priorities to make the right call faster.</p><ArrowLink href="/features" dark>Explore the system</ArrowLink></div><GridVisual /></div></section><section className="section shell"><div className="section-heading compact"><SectionLabel>One source of truth</SectionLabel><h2>Turn every signal into a <em>clear next move.</em></h2></div><div className="data-layout"><DataTable /><div className="metrics"><Metric value="24/7" label="Always-on intelligence" /><Metric value="2 hrs" label="Saved every week" /><Metric value="100%" label="Your data, your rules" /></div></div></section><CtaBand /></main></SiteShell>
+  return (
+    <SiteShell>
+      <main>
+        {/* HERO SECTION */}
+        <section className="shell hero">
+          <div className="hero-copy">
+            <div className="announcement-badge">
+              <Zap size={14} /> 7-Day Risk-Free Customized Trial
+            </div>
+
+            <h1>Build an AI workforce around how your business works.</h1>
+
+            <p>
+              Lunacore configures custom AI assistants trained on your specific business rules, approval limits, and support policies. Test your custom assistant live before making any commitment.
+            </p>
+
+            <div className="hero-actions">
+              <Link href="/contact" className="btn-primary">
+                Book a Demo <ArrowRight size={16} />
+              </Link>
+              <Link href="/features" className="btn-secondary">
+                See How It Works
+              </Link>
+            </div>
+
+            <div className="hero-meta">
+              <span>✓ You Set Spending Rules</span>
+              <span>✓ Zero Guesswork</span>
+            </div>
+          </div>
+
+          {/* Local Website Graphic */}
+          <div className="hero-graphic">
+            <img 
+              src="/website-graphic.png" 
+              alt="Lunacore System Graphic" 
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
+            />
+          </div>
+        </section>
+
+        {/* WORKFLOW DEMO SECTION */}
+        <section className="section">
+          <div className="shell">
+            <div className="section-title">
+              <h2>How Lunacore Handles Work Safely</h2>
+              <p>Your AI assistant evaluates every customer request against your exact store policies.</p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center' }}>
+              <div className="workflow-steps">
+                <div className="workflow-step">
+                  <div className="step-num">1</div>
+                  <div>
+                    <h3 style={{ fontSize: '1rem' }}>Customer Submits Request</h3>
+                    <p style={{ fontSize: '0.875rem' }}>"My order arrived damaged. I want a replacement."</p>
+                  </div>
+                </div>
+
+                <div className="workflow-step">
+                  <div className="step-num">2</div>
+                  <div>
+                    <h3 style={{ fontSize: '1rem' }}>System Checks Your Rules</h3>
+                    <p style={{ fontSize: '0.875rem' }}>Confirms purchase history, return window, and stock level.</p>
+                  </div>
+                </div>
+
+                <div className="workflow-step" style={{ borderColor: 'var(--border-highlight)' }}>
+                  <div className="step-num" style={{ background: 'var(--primary)', color: '#fff' }}>3</div>
+                  <div>
+                    <h3 style={{ fontSize: '1rem' }}>Safe Execution or Escalation</h3>
+                    <p style={{ fontSize: '0.875rem' }}>Creates return shipment automatically or alerts human managers for sign-off.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <WeeklyPerformanceChart />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FEATURES SECTION */}
+        <section className="section">
+          <div className="shell">
+            <div className="section-title">
+              <h2>Full Management Control</h2>
+              <p>Built to ensure your business operations remain safe without unauthorized decisions.</p>
+            </div>
+
+            <div className="feature-grid">
+              <div className="feature-card">
+                <div className="card-icon"><ShieldCheck size={20} /></div>
+                <h3>Custom Rules</h3>
+                <p>Hard-code your exact return, warranty, and pricing rules directly into the system.</p>
+              </div>
+
+              <div className="feature-card">
+                <div className="card-icon"><UserCheck size={20} /></div>
+                <h3>Manager Approvals</h3>
+                <p>Set explicit spending limits. High-value refunds or special cases require quick 1-click human approval.</p>
+              </div>
+
+              <div className="feature-card">
+                <div className="card-icon"><BarChart2 size={20} /></div>
+                <h3>Weekly Reporting</h3>
+                <p>Receive weekly management reports tracking SLA resolution speeds and recurring customer friction.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* BOTTOM CTA */}
+        <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+          <div className="shell" style={{ textAlign: 'center', maxWidth: '700px' }}>
+            <h2>Ready to test your custom AI workforce?</h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              We map out your rules and build a custom demo. Test the assistant on real customer requests for 7 days risk-free.
+            </p>
+            <Link href="/contact" className="btn-primary">
+              Request Your 7-Day Demo <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
+      </main>
+    </SiteShell>
+  )
 }
