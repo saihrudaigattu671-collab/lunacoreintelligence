@@ -1,4 +1,3 @@
-// app/pricing/page.tsx
 import Link from 'next/link'
 import { SiteShell } from '@/components/site-shell'
 
