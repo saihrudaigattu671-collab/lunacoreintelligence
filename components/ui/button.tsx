@@ -1,54 +1,34 @@
 import React from 'react'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'primary' | 'secondary' | 'outline' | 'ghost' | 'link'
-  size?: 'default' | 'sm' | 'lg' | 'icon'
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
+  size?: 'default' | 'sm' | 'lg'
   children?: React.ReactNode
 }
 
 export function Button({
   className = '',
-  variant = 'default',
+  variant = 'primary',
   size = 'default',
   children,
   style = {},
   ...props
 }: ButtonProps) {
-  // Map variant styling to match global system
-  const getVariantClass = () => {
-    switch (variant) {
-      case 'primary':
-      case 'default':
-        return 'btn-primary'
-      case 'secondary':
-      case 'outline':
-        return 'btn-secondary'
-      default:
-        return 'btn-primary'
-    }
-  }
+  // Simple style selection based on how clear and visible the button needs to be
+  const buttonStyle = variant === 'secondary' || variant === 'outline' ? 'btn-secondary' : 'btn-primary'
 
-  // Handle standard component sizing inline
-  const getSizeStyles = (): React.CSSProperties => {
-    switch (size) {
-      case 'sm':
-        return { padding: '0.4rem 0.875rem', fontSize: '0.8125rem' }
-      case 'lg':
-        return { padding: '0.875rem 1.75rem', fontSize: '1rem' }
-      case 'icon':
-        return { padding: '0.5rem', width: '36px', height: '36px', justifyContent: 'center' }
-      default:
-        return {}
-    }
-  }
+  const sizeStyle: React.CSSProperties = 
+    size === 'sm' ? { padding: '0.4rem 0.875rem', fontSize: '0.875rem' } :
+    size === 'lg' ? { padding: '0.875rem 1.75rem', fontSize: '1.0625rem' } : {}
 
   return (
     <button
-      className={`${getVariantClass()} ${className}`}
-      style={{ ...getSizeStyles(), ...style }}
+      className={`${buttonStyle} ${className}`}
+      style={{ ...sizeStyle, ...style }}
       {...props}
     >
-      {children}
+      {/* If no custom text is provided, show simple, friendly default text */}
+      {children || 'Click Here'}
     </button>
   )
 }
