@@ -5,6 +5,11 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
   description: 'Engineered multi-agent AI workforces, certified Deluge scripting, and Zoho ecosystem automation.',
+  icons: {
+    icon: '/logo-mark.png',
+    shortcut: '/logo-mark.png',
+    apple: '/logo-mark.png',
+  },
 }
 
 export default function RootLayout({
