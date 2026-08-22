@@ -380,3 +380,8 @@ a {
     gap: 2rem !important;
   }
 }
+
+.hero-banner {
+  background-color: var(--bg-hero);
+  width: 100%;
+}
