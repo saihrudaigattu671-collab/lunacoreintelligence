@@ -130,6 +130,19 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
+
+        {/* BOTTOM CTA */}
+        <section className="section" style={{ background: '#f8fafc', borderTop: '1px solid var(--border-color)' }}>
+          <div className="shell" style={{ textAlign: 'center', maxWidth: '700px' }}>
+            <h2>Ready to test your custom AI workforce?</h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              We map out your rules and build a custom demo. Test the assistant on real customer requests for 7 days risk-free.
+            </p>
+            <Link href="/contact" className="btn-primary">
+              Request Your 7-Day Demo <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
       </main>
     </SiteShell>
   )
