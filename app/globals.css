@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Upgraded background: a rich, ultra-soft multi-stop gradient canvas */
   --bg-primary: #F8FAFC;
+  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%);
+  
   --bg-card: #FFFFFF;
   --bg-card-alt: #F1F5F9;
   
@@ -24,7 +27,8 @@
 }
 
 body {
-  background-color: var(--bg-primary);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
   color: var(--text-main);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
@@ -73,12 +77,12 @@ a {
   padding: 0 1.5rem;
 }
 
-/* Header & Nav (Clean Light Unified Theme) */
+/* Header & Nav */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(248, 250, 252, 0.9);
+  background: rgba(248, 250, 252, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 0;
@@ -97,7 +101,7 @@ a {
 }
 
 .brand-logo {
-  height: 32px;
+  height: 44px;
   width: auto;
 }
 
@@ -127,7 +131,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
   border: none;
   cursor: pointer;
 }
@@ -151,9 +155,9 @@ a {
   border-color: var(--primary);
 }
 
-/* Hero Section (Light & Unified) */
+/* Hero Section */
 .hero-banner {
-  background-color: var(--bg-primary);
+  background: transparent;
   width: 100%;
 }
 
@@ -205,13 +209,13 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
 /* Sections */
 .section {
   padding: 5rem 0;
-  background-color: var(--bg-primary);
+  background: transparent;
   border-top: 1px solid var(--border-color);
 }
 
@@ -242,7 +246,7 @@ a {
 .feature-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 20px -4px rgba(37, 99, 235, 0.08);
 }
 
 .card-icon {
@@ -262,7 +266,7 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
 }
 
 .bar-chart-container {
@@ -307,7 +311,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .step-num {
@@ -323,9 +327,9 @@ a {
   font-weight: 600;
 }
 
-/* Footer (Unified Light Theme) */
+/* Footer */
 .site-footer {
-  background: #F1F5F9;
+  background: #EAEFF5;
   color: var(--text-muted);
   border-top: 1px solid var(--border-color);
   padding: 4rem 0 2rem;
@@ -346,7 +350,6 @@ a {
   font-size: 0.875rem;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
