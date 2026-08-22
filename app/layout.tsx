@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
   description: 'Engineered multi-agent AI workforces, certified Deluge scripting, and Zoho ecosystem automation.',
   icons: {
-    icon: '/logo-mark.png',
-    shortcut: '/logo-mark.png',
-    apple: '/logo-mark.png',
+    icon: '/logo-mark.png?v=2',
+    shortcut: '/logo-mark.png?v=2',
+    apple: '/logo-mark.png?v=2',
   },
 }
 
