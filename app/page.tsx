@@ -6,41 +6,43 @@ export default function HomePage() {
   return (
     <SiteShell>
       <main>
-        {/* HERO SECTION */}
-        <section className="shell hero">
-          <div className="hero-copy">
-            <div className="announcement-badge">
-              <Zap size={14} /> 7-Day Risk-Free Customized Trial
+        {/* HERO SECTION (Full width dark banner) */}
+        <section className="hero-banner">
+          <div className="shell hero">
+            <div className="hero-copy">
+              <div className="announcement-badge">
+                <Zap size={14} /> 7-Day Risk-Free Customized Trial
+              </div>
+
+              <h1>Build an AI workforce around how your business works.</h1>
+
+              <p>
+                Lunacore configures custom AI assistants trained on your specific business rules, approval limits, and support policies. Test your custom assistant live before making any commitment.
+              </p>
+
+              <div className="hero-actions">
+                <Link href="/contact" className="btn-primary">
+                  Book a Demo <ArrowRight size={16} />
+                </Link>
+                <Link href="/features" className="btn-secondary">
+                  See How It Works
+                </Link>
+              </div>
+
+              <div className="hero-meta">
+                <span>✓ You Set Spending Rules</span>
+                <span>✓ Zero Guesswork</span>
+              </div>
             </div>
 
-            <h1>Build an AI workforce around how your business works.</h1>
-
-            <p>
-              Lunacore configures custom AI assistants trained on your specific business rules, approval limits, and support policies. Test your custom assistant live before making any commitment.
-            </p>
-
-            <div className="hero-actions">
-              <Link href="/contact" className="btn-primary">
-                Book a Demo <ArrowRight size={16} />
-              </Link>
-              <Link href="/features" className="btn-secondary">
-                See How It Works
-              </Link>
+            {/* Local Website Graphic */}
+            <div className="hero-graphic">
+              <img 
+                src="/website-graphic.png" 
+                alt="Lunacore System Graphic" 
+                style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
+              />
             </div>
-
-            <div className="hero-meta">
-              <span>✓ You Set Spending Rules</span>
-              <span>✓ Zero Guesswork</span>
-            </div>
-          </div>
-
-          {/* Local Website Graphic */}
-          <div className="hero-graphic">
-            <img 
-              src="/website-graphic.png" 
-              alt="Lunacore System Graphic" 
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
-            />
           </div>
         </section>
 
