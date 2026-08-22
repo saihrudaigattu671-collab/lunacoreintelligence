@@ -12,9 +12,11 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell nav-row">
-        <Link href="/" className="logo-container">
-          <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
-          <span style={{ fontWeight: 600, fontSize: '1.125rem' }}>Lunacore Intelligence</span>
+        <Link href="/" className="logo-container" style={{ gap: '1rem' }}>
+          <img src={markUrl} alt="Lunacore Logo" className="brand-logo" style={{ height: '50px', width: 'auto' }} />
+          <span style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.01em', color: 'var(--text-main)' }}>
+            LUNACORE INTELLIGENCE
+          </span>
         </Link>
 
         <nav className="desktop-nav">
@@ -39,9 +41,9 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div>
-          <div className="logo-container" style={{ marginBottom: '1rem' }}>
-            <img src={markUrl} alt="Lunacore Logo" className="brand-logo" />
-            <span style={{ fontWeight: 600 }}>Lunacore Intelligence</span>
+          <div className="logo-container" style={{ marginBottom: '1rem', gap: '0.75rem' }}>
+            <img src={markUrl} alt="Lunacore Logo" className="brand-logo" style={{ height: '40px', width: 'auto' }} />
+            <span style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--text-main)' }}>LUNACORE INTELLIGENCE</span>
           </div>
           <p style={{ maxWidth: '300px', fontSize: '0.875rem' }}>
             Building customized AI assistants tailored directly to your business rules and workflows.
