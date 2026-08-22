@@ -70,7 +70,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="workflow-step" style={{ borderColor: 'var(--border-highlight)' }}>
+                <div className="workflow-step" style={{ borderColor: 'var(--primary)' }}>
                   <div className="step-num" style={{ background: 'var(--primary)', color: '#fff' }}>3</div>
                   <div>
                     <h3 style={{ fontSize: '1rem' }}>Safe Execution or Escalation</h3>
@@ -117,10 +117,10 @@ export default function HomePage() {
         </section>
 
         {/* BOTTOM CTA */}
-        <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+        <section className="section" style={{ background: '#0f172a', color: '#fff', borderTop: 'none' }}>
           <div className="shell" style={{ textAlign: 'center', maxWidth: '700px' }}>
-            <h2>Ready to test your custom AI workforce?</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
+            <h2 style={{ color: '#fff' }}>Ready to test your custom AI workforce?</h2>
+            <p style={{ marginBottom: '1.5rem', color: '#94a3b8' }}>
               We map out your rules and build a custom demo. Test the assistant on real customer requests for 7 days risk-free.
             </p>
             <Link href="/contact" className="btn-primary">
