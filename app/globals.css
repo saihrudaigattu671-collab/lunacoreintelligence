@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Upgraded background: a rich, ultra-soft multi-stop gradient canvas */
-  --bg-primary: #F8FAFC;
-  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%);
+  --bg-primary: #F1F5F9; /* Light blue-gray background base */
   
   --bg-card: #FFFFFF;
-  --bg-card-alt: #F1F5F9;
+  --bg-card-hover: #FAFAFB;
   
-  --border-color: #E2E8F0;
-  --border-highlight: #2563EB;
+  --border-color: #CBD5E1; /* Slightly higher contrast border */
+  --border-card: #E2E8F0;
   
   --text-main: #0F172A;
   --text-muted: #475569;
-  --text-accent: #2563EB;
   
   --primary: #2563EB;
   --primary-hover: #1D4ED8;
@@ -27,8 +24,7 @@
 }
 
 body {
-  background: var(--bg-gradient);
-  background-attachment: fixed;
+  background-color: var(--bg-primary);
   color: var(--text-main);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
@@ -77,15 +73,16 @@ a {
   padding: 0 1.5rem;
 }
 
-/* Header & Nav */
+/* Navbar: Slightly brighter/cleaner than the hero background for structural separation */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(248, 250, 252, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .nav-row {
@@ -155,10 +152,13 @@ a {
   border-color: var(--primary);
 }
 
-/* Hero Section */
+/* Hero Section with a very soft cyan/blue radial glow for AI tech depth */
 .hero-banner {
-  background: transparent;
+  position: relative;
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 75% 40%, rgba(37, 99, 235, 0.07) 0%, transparent 60%);
   width: 100%;
+  overflow: hidden;
 }
 
 .hero {
@@ -167,6 +167,8 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy {
@@ -203,19 +205,20 @@ a {
   margin-top: 1rem;
 }
 
+/* Increased contrast card styling */
 .hero-graphic {
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08);
 }
 
 /* Sections */
 .section {
   padding: 5rem 0;
-  background: transparent;
+  background-color: var(--bg-primary);
   border-top: 1px solid var(--border-color);
 }
 
@@ -239,14 +242,14 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -1px rgba(15, 23, 42, 0.02);
   transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary);
-  box-shadow: 0 12px 20px -4px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.1);
 }
 
 .card-icon {
@@ -266,7 +269,7 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
 }
 
 .bar-chart-container {
@@ -311,11 +314,11 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02);
 }
 
 .step-num {
-  background: var(--bg-card-alt);
+  background: #F1F5F9;
   color: var(--primary);
   width: 28px;
   height: 28px;
@@ -329,7 +332,7 @@ a {
 
 /* Footer */
 .site-footer {
-  background: #EAEFF5;
+  background: #E2E8F0;
   color: var(--text-muted);
   border-top: 1px solid var(--border-color);
   padding: 4rem 0 2rem;
