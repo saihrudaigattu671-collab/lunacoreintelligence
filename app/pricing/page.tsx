@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PricingPage() {
+
 
 export default function PricingPage() {
   return (
