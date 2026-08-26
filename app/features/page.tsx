@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function FeaturesPage() {
 
 export default function FeaturesPage() {
   return (
