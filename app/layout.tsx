@@ -3,21 +3,15 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  // Sets your official production domain base for all relative links and SEO canonicals
   metadataBase: new URL('https://lunacoreintelligence.com'),
-  
   title: {
     default: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
     template: '%s | Lunacore Intelligence',
   },
   description: 'Engineered multi-agent AI workforces, certified Deluge scripting, and Zoho ecosystem automation.',
-  
-  // Forces search engines to treat the custom domain as the primary canonical address
   alternates: {
     canonical: '/',
   },
-
-  // Open Graph configuration for professional preview cards on WhatsApp, LinkedIn, etc.
   openGraph: {
     title: 'Lunacore Intelligence | Autonomous AI Workforces',
     description: 'Scale your business operations 24/7 with zero hallucinations. Custom Zoho middleware and autonomous AI agents.',
@@ -25,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Lunacore Intelligence',
     images: [
       {
-        url: '/website-graphic.png', // Using an existing asset from your public folder
+        url: '/website-graphic.png',
         width: 1200,
         height: 630,
         alt: 'Lunacore Intelligence Preview',
@@ -40,7 +34,6 @@ export const metadata: Metadata = {
     description: 'Enterprise-grade multi-agent AI assistants and custom Zoho middleware.',
     images: ['/website-graphic.png'],
   },
-
   icons: {
     icon: '/logo-mark.png?v=2',
     shortcut: '/logo-mark.png?v=2',
@@ -53,7 +46,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Organization JSON-LD Schema to boost local & brand search presence
+  // Organization JSON-LD Schema for Search Engine Recognition
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -72,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Structured Data injection for search engine recognition */}
+        {/* JSON-LD Script injection */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
