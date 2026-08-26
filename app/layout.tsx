@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
+    default:
+      'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
     template: '%s | Lunacore Intelligence',
   },
 
   description:
-    'Lunacore Intelligence builds autonomous AI workforces, multi-agent AI assistants, and custom Zoho automation solutions for modern businesses.',
+    'Lunacore Intelligence builds autonomous AI workforces, multi-agent AI assistants, policy enforcement systems, and custom Zoho automation solutions for modern businesses.',
 
   applicationName: 'Lunacore Intelligence',
 
@@ -48,15 +49,17 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'Lunacore Intelligence',
-    title: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
+    title:
+      'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
     description:
-      'Build autonomous AI workforces, multi-agent assistants, and intelligent Zoho automation workflows with Lunacore Intelligence.',
+      'Build autonomous AI workforces, multi-agent AI assistants, and intelligent Zoho automation workflows with Lunacore Intelligence.',
     images: [
       {
         url: '/website-graphic.png',
         width: 1200,
         height: 630,
-        alt: 'Lunacore Intelligence - Autonomous AI Workforces and Zoho Automation',
+        alt:
+          'Lunacore Intelligence - Autonomous AI Workforces and Zoho Automation',
       },
     ],
   },
@@ -78,9 +81,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
