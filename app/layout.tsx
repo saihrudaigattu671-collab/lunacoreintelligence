@@ -80,10 +80,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* Custom Zoho Chatkit Web Component */}
+        {/* Custom Zoho Chatkit Web Component with updated entity ID */}
         <div
           dangerouslySetInnerHTML={{
-            __html: `<agents-chatkit ziaAgents='{"orgId":"60078514038", "entityId":"2957000000051071"}'></agents-chatkit>`,
+            __html: `<agents-chatkit ziaAgents='{"orgId":"60078514038", "entityId":"2957000000093057"}'></agents-chatkit>`,
           }}
         />
       </body>
