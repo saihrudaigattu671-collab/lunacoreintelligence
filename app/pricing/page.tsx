@@ -1,6 +1,33 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/site-shell'
 import { Check, ArrowRight, Shield } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'AI Automation Pricing & Plans',
+  description:
+    'Explore Lunacore Intelligence pricing for informative AI bots, autonomous support, hybrid human-AI support, and full AI workforce automation.',
+  alternates: {
+    canonical: '/pricing',
+  },
+  openGraph: {
+    title: 'AI Automation Pricing & Plans | Lunacore Intelligence',
+    description:
+      'Compare Lunacore Intelligence AI workforce plans, from informative bots to full AI automation with Zoho and Deluge engineering.',
+    url: 'https://lunacoreintelligence.com/pricing',
+    type: 'website',
+    images: [
+      {
+        url: '/website-graphic.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lunacore Intelligence Pricing Plans',
+      },
+    ],
+  },
+}
+
+export default function PricingPage() {
 
 export default function PricingPage() {
   return (
