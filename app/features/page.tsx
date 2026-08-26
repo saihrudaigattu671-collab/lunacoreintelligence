@@ -1,6 +1,42 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/site-shell'
-import { ShieldCheck, UserCheck, Layers, Cpu, ArrowRight, CheckCircle2, Bot, FileText } from 'lucide-react'
+import {
+  ShieldCheck,
+  UserCheck,
+  Layers,
+  Cpu,
+  ArrowRight,
+  CheckCircle2,
+  Bot,
+  FileText,
+} from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'AI Workforce Features & Capabilities',
+  description:
+    'Explore Lunacore Intelligence features including multi-agent AI systems, policy enforcement, Zoho integrations, automated reporting, and human oversight.',
+  alternates: {
+    canonical: '/features',
+  },
+  openGraph: {
+    title: 'AI Workforce Features & Capabilities | Lunacore Intelligence',
+    description:
+      'Explore autonomous AI workforce capabilities, multi-agent orchestration, policy controls, Zoho integrations, and executive intelligence reports.',
+    url: 'https://lunacoreintelligence.com/features',
+    type: 'website',
+    images: [
+      {
+        url: '/website-graphic.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lunacore Intelligence AI Workforce Features',
+      },
+    ],
+  },
+}
+
+export default function FeaturesPage() {
 
 export default function FeaturesPage() {
   return (
@@ -10,7 +46,7 @@ export default function FeaturesPage() {
         <section className="shell" style={{ padding: '4rem 1.5rem 2rem', textAlign: 'center', maxWidth: '750px' }}>
           <h1>System Features & Capability Overview</h1>
           <p style={{ marginTop: '0.75rem', fontSize: '1.125rem' }}>
-            Lunacore is built to handle customer operations automatically while preserving strict human oversight on sensitive decisions[cite: 1].
+            Lunacore is built to handle customer operations automatically while preserving strict human oversight on sensitive decisions.
           </p>
         </section>
 
@@ -92,7 +128,7 @@ export default function FeaturesPage() {
             <div className="section-title">
               <span style={{ color: 'var(--text-accent)', fontSize: '0.875rem', fontWeight: 600 }}>ADVANCED ORCHESTRATION</span>
               <h2>Multi-Agent Systems & Hierarchy</h2>
-              <p>How Lunacore divides labor across specialized sub-agents to completely eliminate hallucinations[cite: 1].</p>
+              <p>How Lunacore divides labor across specialized sub-agents to completely eliminate hallucinations.</p>
             </div>
 
             {/* Displaying the uploaded info.png hierarchy image */}
@@ -138,16 +174,16 @@ export default function FeaturesPage() {
                 <span style={{ color: 'var(--text-accent)', fontSize: '0.875rem', fontWeight: 600 }}>EXECUTIVE INTELLIGENCE</span>
                 <h2 style={{ fontSize: '1.75rem', margin: '0.5rem 0 1rem' }}>The Two Weekly Executive Reports</h2>
                 <p style={{ marginBottom: '1.25rem', fontSize: '0.9375rem' }}>
-                  Available on Tier 2 plans and above, management receives two automated AI intelligence reports every Monday[cite: 1] to maintain absolute operational clarity.
+                  Available on Tier 2 plans and above, management receives two automated AI intelligence reports every Monday to maintain absolute operational clarity.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.9rem' }}>
                   <div style={{ background: 'var(--bg-card)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                    <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--text-main)' }}>1. Bot Performance Metrics Report[cite: 1]</strong>
-                    <p style={{ fontSize: '0.8125rem', margin: 0 }}>Summarizes total conversation volume, lead conversion rates, autonomous resolution percentage, and operational hours saved[cite: 1].</p>
+                    <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--text-main)' }}>1. Bot Performance Metrics Report</strong>
+                    <p style={{ fontSize: '0.8125rem', margin: 0 }}>Summarizes total conversation volume, lead conversion rates, autonomous resolution percentage, and operational hours saved.</p>
                   </div>
                   <div style={{ background: 'var(--bg-card)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                     <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--text-main)' }}>2. Customer Friction & Issues Report[cite: 1]</strong>
-                    <p style={{ fontSize: '0.8125rem', margin: 0 }}>Automated grouping of recurring complaints, early warnings on broken links or policy misunderstandings, and actionable operational advice[cite: 1].</p>
+                    <p style={{ fontSize: '0.8125rem', margin: 0 }}>Automated grouping of recurring complaints, early warnings on broken links or policy misunderstandings, and actionable operational advice.</p>
                   </div>
                 </div>
               </div>
