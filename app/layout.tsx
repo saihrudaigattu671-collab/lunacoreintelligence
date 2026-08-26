@@ -132,6 +132,22 @@ export default function RootLayout({
 
       <body>
         {children}
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-NG1QL8PV76"
+  strategy="afterInteractive"
+/>
+
+<Script
+  id="google-analytics"
+  strategy="afterInteractive"
+>
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NG1QL8PV76');
+  `}
+</Script>
 
         <Script
           src="https://agents.zoho.in/resources/addon-chat/assets/js/agents-chat-sdk.js"
