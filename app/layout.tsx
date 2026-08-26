@@ -2,38 +2,73 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 
+const siteUrl = 'https://lunacoreintelligence.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lunacoreintelligence.com'),
+  metadataBase: new URL(siteUrl),
+
   title: {
     default: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
     template: '%s | Lunacore Intelligence',
   },
-  description: 'Engineered multi-agent AI workforces, certified Deluge scripting, and Zoho ecosystem automation.',
+
+  description:
+    'Lunacore Intelligence builds autonomous AI workforces, multi-agent AI assistants, and custom Zoho automation solutions for modern businesses.',
+
+  applicationName: 'Lunacore Intelligence',
+
+  authors: [
+    {
+      name: 'Lunacore Intelligence',
+      url: siteUrl,
+    },
+  ],
+
+  creator: 'Lunacore Intelligence',
+  publisher: 'Lunacore Intelligence',
+
   alternates: {
     canonical: '/',
   },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
   openGraph: {
-    title: 'Lunacore Intelligence | Autonomous AI Workforces',
-    description: 'Scale your business operations 24/7 with zero hallucinations. Custom Zoho middleware and autonomous AI agents.',
-    url: 'https://lunacoreintelligence.com',
+    type: 'website',
+    locale: 'en_US',
+    url: siteUrl,
     siteName: 'Lunacore Intelligence',
+    title: 'Lunacore Intelligence | Autonomous AI Workforces & Zoho Automation',
+    description:
+      'Build autonomous AI workforces, multi-agent assistants, and intelligent Zoho automation workflows with Lunacore Intelligence.',
     images: [
       {
         url: '/website-graphic.png',
         width: 1200,
         height: 630,
-        alt: 'Lunacore Intelligence Preview',
+        alt: 'Lunacore Intelligence - Autonomous AI Workforces and Zoho Automation',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'Lunacore Intelligence',
-    description: 'Enterprise-grade multi-agent AI assistants and custom Zoho middleware.',
+    title: 'Lunacore Intelligence | Autonomous AI Workforces',
+    description:
+      'Enterprise-grade multi-agent AI assistants and custom Zoho automation solutions.',
     images: ['/website-graphic.png'],
   },
+
   icons: {
     icon: '/logo-mark.png?v=2',
     shortcut: '/logo-mark.png?v=2',
@@ -46,41 +81,60 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Organization JSON-LD Schema for Search Engine Recognition
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Lunacore Intelligence',
-    url: 'https://lunacoreintelligence.com',
-    logo: 'https://lunacoreintelligence.com/logo-mark.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+91-76740-95537',
-      contactType: 'customer support',
-      email: 'saihrudaigattu671@gmail.com',
+    url: siteUrl,
+    logo: `${siteUrl}/logo-mark.png`,
+    description:
+      'Lunacore Intelligence builds autonomous AI workforces, multi-agent AI assistants, and custom Zoho automation solutions.',
+  }
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Lunacore Intelligence',
+    url: siteUrl,
+    description:
+      'Autonomous AI workforces, multi-agent AI assistants, and Zoho automation solutions.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Lunacore Intelligence',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo-mark.png`,
+      },
     },
-    description: 'Enterprise-grade autonomous AI workforces and custom Zoho middleware.',
-  };
+  }
 
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD Script injection */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
         />
       </head>
+
       <body>
         {children}
 
-        {/* Zoho Chat SDK Script */}
         <Script
           src="https://agents.zoho.in/resources/addon-chat/assets/js/agents-chat-sdk.js"
           strategy="afterInteractive"
         />
 
-        {/* Custom Zoho Chatkit Web Component with updated entity ID */}
         <div
           dangerouslySetInnerHTML={{
             __html: `<agents-chatkit ziaAgents='{"orgId":"60078514038", "entityId":"2957000000093057"}'></agents-chatkit>`,
