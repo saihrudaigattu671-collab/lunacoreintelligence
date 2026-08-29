@@ -149,14 +149,13 @@ export default function RootLayout({
   `}
 </Script>
 
-        <Script
-          src="https://agents.zoho.in/resources/addon-chat/assets/js/agents-chat-sdk.js"
-          strategy="afterInteractive"
-        />
+      <script src= "https://agents.zoho.in/resources/addon-chat/assets/js/agents-chat-sdk.js" >
+      </script> 
+
 
         <div
           dangerouslySetInnerHTML={{
-            __html: `<agents-chatkit ziaAgents='{"orgId":"60078514038", "entityId":"2957000000093057"}'></agents-chatkit>`,
+            __html: ` <agents-chatkit ziaAgents=  '{orgId:"60084985888", entityId:"7753000000016277"}'></agents-chatkit> `,
           }}
         />
       </body>
