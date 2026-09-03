@@ -73,7 +73,8 @@ export function SiteFooter() {
             <p style={{ margin: 0 }}>
               Email:{' '}
               <a href="mailto:saihrudaigattu671@gmail.com" className="nav-link" style={{ display: 'inline' }}>
-                saihrudaigattu671@gmail.com
+                saihrudaigattu@lunacoreintelligence.com
+
               </a>
             </p>
             <p style={{ margin: 0 }}>
