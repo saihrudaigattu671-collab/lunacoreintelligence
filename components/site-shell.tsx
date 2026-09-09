@@ -93,27 +93,49 @@ export function SiteFooter() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <Link href="/contact" className="nav-link">Book Demo</Link>
             <Link href="/security" className="nav-link">Safety Standards</Link>
-            <a href="https://www.linkedin.com/company/lunacore-intelligence" target="_blank" rel="noopener noreferrer" className="nav-link">
-              LinkedIn
-            </a>
+            <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem', alignItems: 'center' }}>
+              <a 
+                href="https://www.linkedin.com/company/lunacore-intelligence/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                title="Lunacore Intelligence Company Page"
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', borderRadius: '6px', background: 'var(--card-bg, #f1f5f9)', color: 'var(--text-main, #0f172a)', transition: 'background 0.2s' }}
+              >
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/sai-hrudai-gattu-6b1427384" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                title="Founder: Sai Hrudai Gattu"
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', borderRadius: '6px', background: 'var(--card-bg, #f1f5f9)', color: 'var(--text-main, #0f172a)', transition: 'background 0.2s' }}
+              >
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted, #64748b)' }}>LinkedIn</span>
+            </div>
           </div>
         </div>
 
         <div>
           <h3 style={{ fontSize: '0.9375rem', marginBottom: '1rem' }}>Office Contact</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
-            <p style={{ margin: 0 }}>
-              Email:{' '}
-              <a href="mailto:saihrudaigattu@lunacoreintelligence.com" className="nav-link" style={{ display: 'inline', wordBreak: 'break-all' }}>
+            <div style={{ margin: 0 }}>
+              <span style={{ display: 'block', color: 'var(--text-muted, #64748b)', fontSize: '0.8125rem' }}>Email:</span>
+              <a href="mailto:saihrudaigattu@lunacoreintelligence.com" className="nav-link" style={{ display: 'block', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                 saihrudaigattu@lunacoreintelligence.com
               </a>
-            </p>
-            <p style={{ margin: 0 }}>
-              Phone:{' '}
+            </div>
+            <div style={{ margin: 0 }}>
+              <span style={{ display: 'block', color: 'var(--text-muted, #64748b)', fontSize: '0.8125rem' }}>Phone:</span>
               <a href="tel:+917674095537" className="nav-link" style={{ display: 'inline' }}>
                 +91 76740 95537
               </a>
-            </p>
+            </div>
             <p style={{ margin: 0, color: 'var(--text-muted, #94a3b8)' }}>
               Hyderabad, Telangana, India
             </p>
