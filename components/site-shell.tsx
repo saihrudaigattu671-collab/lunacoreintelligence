@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -9,6 +10,15 @@ export const markUrl = '/logo-mark.png'
 export const lockupUrl = '/website-graphic.png'
 
 export function SiteHeader() {
+  const pathname = usePathname()
+
+  const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Security', href: '/security' },
+  ]
+
   return (
     <header className="site-header">
       <div className="shell nav-row">
@@ -19,11 +29,26 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="desktop-nav">
-          <Link href="/" className="nav-link">Home</Link>
-          <Link href="/features" className="nav-link">Features</Link>
-          <Link href="/pricing" className="nav-link">Pricing</Link>
-          <Link href="/security" className="nav-link">Security</Link>
+        <nav className="desktop-nav" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+          {navItems.map((item) => {
+            const isActive = pathname === item.href
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`nav-link ${isActive ? 'active' : ''}`}
+                style={{
+                  fontWeight: isActive ? 600 : 400,
+                  color: isActive ? 'var(--text-main, #0f172a)' : 'var(--text-muted, #64748b)',
+                  borderBottom: isActive ? '2px solid var(--primary, #2563eb)' : '2px solid transparent',
+                  paddingBottom: '0.25rem',
+                  transition: 'all 0.2s ease',
+                }}
+              >
+                {item.name}
+              </Link>
+            )
+          })}
         </nav>
 
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -39,15 +64,19 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="shell footer-grid">
+      <div className="shell footer-grid" style={{ gridTemplateColumns: '1.5fr 1fr 1fr 1.2fr' }}>
         <div>
           <div className="logo-container" style={{ marginBottom: '1rem', gap: '0.75rem' }}>
             <img src={markUrl} alt="Lunacore Logo" className="brand-logo" style={{ height: '40px', width: 'auto' }} />
-            <span style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--text-main)' }}>LUNACORE INTELLIGENCE</span>
+            <span style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--text-main)' }}>LUNACORE INTELLIGENCE (OPC) PVT. LTD.</span>
           </div>
-          <p style={{ maxWidth: '300px', fontSize: '0.875rem' }}>
+          <p style={{ maxWidth: '320px', fontSize: '0.875rem', marginBottom: '1rem', lineHeight: '1.5' }}>
             Building customized AI assistants tailored directly to your business rules and workflows.
           </p>
+          <div style={{ fontSize: '0.75rem', color: 'var(--text-muted, #94a3b8)', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+            <span>CIN: U58202TS2026OPC221341</span>
+            <span>DPIIT Startup Recognition: DIPP281409</span>
+          </div>
         </div>
 
         <div>
@@ -64,6 +93,9 @@ export function SiteFooter() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <Link href="/contact" className="nav-link">Book Demo</Link>
             <Link href="/security" className="nav-link">Safety Standards</Link>
+            <a href="https://www.linkedin.com/company/lunacore-intelligence" target="_blank" rel="noopener noreferrer" className="nav-link">
+              LinkedIn
+            </a>
           </div>
         </div>
 
@@ -72,9 +104,8 @@ export function SiteFooter() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
             <p style={{ margin: 0 }}>
               Email:{' '}
-              <a href="mailto:saihrudaigattu671@gmail.com" className="nav-link" style={{ display: 'inline' }}>
+              <a href="mailto:saihrudaigattu@lunacoreintelligence.com" className="nav-link" style={{ display: 'inline', wordBreak: 'break-all' }}>
                 saihrudaigattu@lunacoreintelligence.com
-
               </a>
             </p>
             <p style={{ margin: 0 }}>
@@ -83,13 +114,16 @@ export function SiteFooter() {
                 +91 76740 95537
               </a>
             </p>
+            <p style={{ margin: 0, color: 'var(--text-muted, #94a3b8)' }}>
+              Hyderabad, Telangana, India
+            </p>
           </div>
         </div>
       </div>
 
       <div className="shell footer-bottom">
-        <span>© {new Date().getFullYear()} Lunacore Intelligence. All rights reserved.</span>
-        <span>Custom AI Workforce Solutions</span>
+        <span>© {new Date().getFullYear()} Lunacore Intelligence (OPC) Private Limited. All rights reserved.</span>
+        <span>Compliance Verified: MCA / DPIIT</span>
       </div>
     </footer>
   )
