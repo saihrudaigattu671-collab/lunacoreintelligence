@@ -15,14 +15,14 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Autonomous AI Workforces & Zoho Automation',
+  title: 'Lunacore Intelligence',
   description:
     'Lunacore Intelligence builds autonomous AI workforces, multi-agent AI assistants, strict policy enforcement systems, and custom Zoho automation solutions for modern businesses.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Autonomous AI Workforces & Zoho Automation',
+    title: 'Lunacore Intelligence',
     description:
       'Deploy autonomous AI assistants and intelligent Zoho automation workflows with Lunacore Intelligence.',
     url: 'https://lunacoreintelligence.com/',
