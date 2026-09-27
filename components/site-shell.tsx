@@ -54,7 +54,7 @@ export function SiteHeader() {
         {/* Action Buttons: Partner Portal & Request Demo */}
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
           <Link 
-            href="/partner" 
+            href="partner/app/page.tsx" 
             style={{
               display: 'inline-flex',
               alignItems: 'center',
