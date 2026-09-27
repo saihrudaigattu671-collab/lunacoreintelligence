@@ -1,6 +1,6 @@
 import React from 'react'
-import { PartnersHeader } from '../components/PartnersHeader'
-import { PartnersFooter } from '../components/PartnersFooter'
+import { PartnersHeader } from '@/app/partner/components/PartnersHeader'
+import { PartnersFooter } from '@/app/partner/components/PartnersFooter'
 
 export default function PartnerEconomicsPage() {
   const tableHeaderStyle = { padding: '1rem', background: '#f1f5f9', borderBottom: '2px solid #cbd5e1', textAlign: 'left' as const, fontWeight: 700, color: '#0f172a' }
