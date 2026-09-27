@@ -1,6 +1,6 @@
 import React from 'react'
-import { PartnersHeader } from '../components/PartnersHeader'
-import { PartnersFooter } from '../components/PartnersFooter'
+import { PartnersHeader } from '@/app/partner/components/PartnersHeader'
+import { PartnersFooter } from '@/app/partner/components/PartnersFooter'
 
 export default function PartnerProcessPage() {
   return (
