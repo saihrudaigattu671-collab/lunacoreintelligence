@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Handshake } from 'lucide-react'
 
 // Local assets stored in public/ folder (Zero Vercel dependencies)
 export const markUrl = '/logo-mark.png'
@@ -17,7 +17,6 @@ export function SiteHeader() {
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Security', href: '/security' },
-    { name: 'Partner', href: '/partner' },
   ]
 
   return (
@@ -32,7 +31,7 @@ export function SiteHeader() {
 
         <nav className="desktop-nav" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
           {navItems.map((item) => {
-            const isActive = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href))
+            const isActive = pathname === item.href
             return (
               <Link
                 key={item.href}
@@ -52,7 +51,28 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        {/* Action Buttons: Partner Portal & Request Demo */}
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+          <Link 
+            href="/partner" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              background: 'var(--card-bg, #f1f5f9)',
+              color: 'var(--text-main, #0f172a)',
+              border: '1px solid var(--border, #cbd5e1)',
+              textDecoration: 'none',
+              transition: 'all 0.2s ease',
+            }}
+          >
+            <Handshake size={16} /> Partner Portal
+          </Link>
+
           <Link href="/contact" className="btn-primary">
             Request Demo <ArrowUpRight size={16} />
           </Link>
