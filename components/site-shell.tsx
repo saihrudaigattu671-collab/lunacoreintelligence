@@ -17,6 +17,7 @@ export function SiteHeader() {
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Security', href: '/security' },
+    { name: 'Partner', href: '/partner' },
   ]
 
   return (
@@ -31,7 +32,7 @@ export function SiteHeader() {
 
         <nav className="desktop-nav" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
           {navItems.map((item) => {
-            const isActive = pathname === item.href
+            const isActive = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href))
             return (
               <Link
                 key={item.href}
@@ -85,6 +86,7 @@ export function SiteFooter() {
             <Link href="/features" className="nav-link">Workflows</Link>
             <Link href="/pricing" className="nav-link">Pricing Plans</Link>
             <Link href="/security" className="nav-link">Data Protection</Link>
+            <Link href="/partner" className="nav-link">Partner Portal</Link>
           </div>
         </div>
 
