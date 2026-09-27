@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 import { ArrowUpRight, Handshake } from 'lucide-react'
 
-// Local assets stored in public/ folder (Zero Vercel dependencies)
+// Local assets stored in public/ folder
 export const markUrl = '/logo-mark.png'
 export const lockupUrl = '/website-graphic.png'
 
@@ -51,10 +51,10 @@ export function SiteHeader() {
           })}
         </nav>
 
-        {/* Action Buttons: Partner Portal (pointing to partner/app) & Request Demo */}
+        {/* Action Buttons: Partner Portal & Request Demo */}
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
           <Link 
-            href="/partner/app" 
+            href="/partner" 
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -106,7 +106,7 @@ export function SiteFooter() {
             <Link href="/features" className="nav-link">Workflows</Link>
             <Link href="/pricing" className="nav-link">Pricing Plans</Link>
             <Link href="/security" className="nav-link">Data Protection</Link>
-            <Link href="/partner/app" className="nav-link">Partner Portal</Link>
+            <Link href="/partner" className="nav-link">Partner Portal</Link>
           </div>
         </div>
 
@@ -186,6 +186,44 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       {children}
       <SiteFooter />
+    </div>
+  )
+}
+
+// Local interactive resolution chart component
+export function WeeklyPerformanceChart() {
+  return (
+    <div className="chart-card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <div>
+          <h3 style={{ fontSize: '1rem' }}>Weekly Resolution Rate</h3>
+          <p style={{ fontSize: '0.8125rem' }}>Automated Customer Tasks Handled</p>
+        </div>
+        <span style={{ color: 'var(--success)', fontWeight: 600, fontSize: '0.875rem' }}>94.2% Auto-Resolved</span>
+      </div>
+
+      <div className="bar-chart-container">
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '50%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Mon</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '65%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tue</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '80%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Wed</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar highlight" style={{ height: '95%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Thu</span>
+        </div>
+        <div className="chart-bar-wrap">
+          <div className="chart-bar" style={{ height: '75%' }}></div>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Fri</span>
+        </div>
+      </div>
     </div>
   )
 }
