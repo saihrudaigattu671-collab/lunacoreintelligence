@@ -19,7 +19,7 @@ export default function PartnerEconomicsPage() {
               Lucrative Payouts & <span style={{ color: '#34d399' }}>Transparent Terms</span>
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#cbd5e1', lineHeight: '1.6', marginBottom: '0' }}>
-              Structured around high upfront compensation funded by monthly subscription revenue, while the one-time setup fee remains completely separate as a non-negotiable technical deployment charge[cite: 12].
+              Structured around high upfront compensation funded by monthly subscription revenue, while the one-time setup fee remains completely separate as a non-negotiable technical deployment charge .
             </p>
           </div>
 
@@ -29,8 +29,8 @@ export default function PartnerEconomicsPage() {
             </h3>
             <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#e2e8f0', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem' }}>
               <li>Promotional discounts apply exclusively to monthly bot subscriptions.</li>
-              <li>Setup fees are non-negotiable and strictly excluded from commission pools[cite: 12].</li>
-              <li>Base 15% upfront payouts paid immediately upon client contract signature & initial payment clearance[cite: 12].</li>
+              <li>Setup fees are non-negotiable and strictly excluded from commission pools .</li>
+              <li>Base 15% upfront payouts paid immediately upon client contract signature & initial payment clearance .</li>
             </ul>
           </div>
         </div>
@@ -54,10 +54,10 @@ export default function PartnerEconomicsPage() {
               </div>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.75rem' }}>Base Partner Commission</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: '1.6', marginBottom: '1.25rem' }}>
-                15% of Monthly Subscription Fee (Strictly excludes setup fee)[cite: 12].
+                15% of Monthly Subscription Fee (Strictly excludes setup fee) .
               </p>
               <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '1rem', fontSize: '0.85rem', color: '#64748b', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={16} color="#10b981" /> Paid immediately upon client contract signature & initial payment clearing[cite: 12].
+                <CheckCircle2 size={16} color="#10b981" /> Paid immediately upon client contract signature & initial payment clearing .
               </div>
             </div>
 
@@ -68,10 +68,10 @@ export default function PartnerEconomicsPage() {
               </div>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.75rem' }}>60-Day Volume Accelerator</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: '1.6', marginBottom: '1.25rem' }}>
-                Extra 8% Bonus on Sum of Subscription Fees (Strictly excludes setup fees)[cite: 12].
+                Extra 8% Bonus on Sum of Subscription Fees (Strictly excludes setup fees) .
               </p>
               <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '1rem', fontSize: '0.85rem', color: '#64748b', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={16} color="#10b981" /> Triggered retroactively upon closing 15+ (Tier 2, 3 & 4) contracts within 60 days[cite: 12].
+                <CheckCircle2 size={16} color="#10b981" /> Triggered retroactively upon closing 15+ (Tier 2, 3 & 4) contracts within 60 days .
               </div>
             </div>
           </div>
@@ -99,24 +99,24 @@ export default function PartnerEconomicsPage() {
                 <tbody style={{ color: '#0f172a' }}>
                   <tr style={{ borderBottom: '1px solid #f1f5f9', background: '#f8fafc' }}>
                     <td style={{ padding: '1.25rem 1.5rem', fontWeight: 600 }}>Tier 2: Autonomous Support</td>
-                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>SMBs, E-Commerce, High-Intent Lead Sites[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹12,000 /mo[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹1,800[cite: 12]</td>
+                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>SMBs, E-Commerce, High-Intent Lead Sites </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000 </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹12,000 /mo </td>
+                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹1,800 </td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f1f5f9' }}>
                     <td style={{ padding: '1.25rem 1.5rem', fontWeight: 600 }}>Tier 3: Hybrid Support Agent</td>
-                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>Mid-Market, High-Volume Support (1 Human)[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹30,000 /mo[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹4,500[cite: 12]</td>
+                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>Mid-Market, High-Volume Support (1 Human) </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000 </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹30,000 /mo </td>
+                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹4,500 </td>
                   </tr>
                   <tr>
                     <td style={{ padding: '1.25rem 1.5rem', fontWeight: 600 }}>Tier 4: Enterprise AI Workforce</td>
-                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>Enterprise Operations (2 Dedicated Humans)[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem' }}>₹60,000 /mo[cite: 12]</td>
-                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹9,000[cite: 12]</td>
+                    <td style={{ padding: '1.25rem 1.5rem', color: '#475569' }}>Enterprise Operations (2 Dedicated Humans) </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹10,000 </td>
+                    <td style={{ padding: '1.25rem 1.5rem' }}>₹60,000 /mo </td>
+                    <td style={{ padding: '1.25rem 1.5rem', fontWeight: 700, color: '#2563eb' }}>₹9,000 </td>
                   </tr>
                 </tbody>
               </table>
@@ -137,10 +137,10 @@ export default function PartnerEconomicsPage() {
               <Clock size={20} color="#2563eb" /> How the 60-Day Rolling Window Works
             </h3>
             <p style={{ fontSize: '0.95rem', color: '#475569', lineHeight: '1.6', marginBottom: '1rem' }}>
-              The 60-day volume accelerator timeline begins on the exact day the formal contract is signed between Lunacore and your company[cite: 12]. 
+              The 60-day volume accelerator timeline begins on the exact day the formal contract is signed between Lunacore and your company . 
             </p>
             <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem' }}>
-              <li><strong>Timeline Window:</strong> From the contract signed date (e.g., August 10th), a 60-day window runs (e.g., until October 10th). If Lunacore signs <strong>15 or more contracts</strong> from your agency side across Tier 2, Tier 3, and Tier 4 within this period, an extra 8% commission on the sum of subscription fees (excluding setup fees) is approved and credited[cite: 12].</li>
+              <li><strong>Timeline Window:</strong> From the contract signed date (e.g., August 10th), a 60-day window runs (e.g., until October 10th). If Lunacore signs <strong>15 or more contracts</strong> from your agency side across Tier 2, Tier 3, and Tier 4 within this period, an extra 8% commission on the sum of subscription fees (excluding setup fees) is approved and credited .</li>
               <li><strong>Rolling Cycles:</strong> If the target of 15 contracts is not met within the current 60-day timeline window, the milestone resets and the next 60-day timeline window starts fresh from zero (meaning the 8% bonus will not be approved for that cycle).</li>
             </ul>
           </div>
@@ -148,36 +148,36 @@ export default function PartnerEconomicsPage() {
           {/* Example Breakdown After */}
           <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>Example Breakdown: Successfully Achieving 20 Contracts in 60 Days</h3>
           <p style={{ fontSize: '0.95rem', color: '#475569', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-            Suppose within the 60-day time period, Lunacore signs 20 contracts through your company: 12 Tier-2 contracts (₹12,000/mo), 5 Tier-3 contracts (₹30,000/mo), and 3 Tier-4 contracts (₹60,000/mo)[cite: 12]. Here is how the earnings calculate:
+            Suppose within the 60-day time period, Lunacore signs 20 contracts through your company: 12 Tier-2 contracts (₹12,000/mo), 5 Tier-3 contracts (₹30,000/mo), and 3 Tier-4 contracts (₹60,000/mo) . Here is how the earnings calculate:
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
             <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '1.75rem', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase' }}>Combined Revenue</span>
-              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0.5rem 0' }}>₹4,74,000[cite: 12]</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0.5rem 0' }}>₹4,74,000 </div>
               <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0 }}>Total monthly subscriptions</p>
             </div>
 
             <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '1.75rem', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#2563eb', textTransform: 'uppercase' }}>15% Commission</span>
-              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#2563eb', margin: '0.5rem 0' }}>₹71,100[cite: 12]</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#2563eb', margin: '0.5rem 0' }}>₹71,100 </div>
               <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0 }}>Base payout total</p>
             </div>
 
             <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '1.75rem', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#059669', textTransform: 'uppercase' }}>8% Volume Bonus</span>
-              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#059669', margin: '0.5rem 0' }}>₹37,920[cite: 12]</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#059669', margin: '0.5rem 0' }}>₹37,920 </div>
               <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0 }}>Accelerator bonus</p>
             </div>
 
             <div style={{ background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)', color: '#fff', borderRadius: '16px', padding: '1.75rem', boxShadow: '0 10px 15px -3px rgba(37, 99, 235, 0.3)' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#bfdbfe', textTransform: 'uppercase' }}>Total Agency Earnings</span>
-              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', margin: '0.5rem 0' }}>₹1,09,020[cite: 12]</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', margin: '0.5rem 0' }}>₹1,09,020 </div>
               <p style={{ fontSize: '0.85rem', color: '#bfdbfe', margin: 0 }}>Combined total payout</p>
             </div>
           </div>
           <div style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '1rem' }}>
-            *Note: The ₹10,000 setup fee per contract (₹2,00,000 total across 20 deals) is collected separately as Lunacore's technical deployment charge[cite: 12].
+            *Note: The ₹10,000 setup fee per contract (₹2,00,000 total across 20 deals) is collected separately as Lunacore's technical deployment charge .
           </div>
         </div>
 
@@ -189,7 +189,7 @@ export default function PartnerEconomicsPage() {
           <div>
             <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#92400e', marginBottom: '0.5rem' }}>Important Commercial Policy & Discounts</h4>
             <p style={{ fontSize: '0.95rem', color: '#b45309', lineHeight: '1.6', margin: 0 }}>
-              Promotional discounts apply <strong>exclusively to monthly bot subscription prices</strong> and never to setup fees[cite: 12]. All commercial agreements and calculations are processed strictly in Indian Rupees (₹)[cite: 12].
+              Promotional discounts apply <strong>exclusively to monthly bot subscription prices</strong> and never to setup fees . All commercial agreements and calculations are processed strictly in Indian Rupees (₹) .
             </p>
           </div>
         </div>
