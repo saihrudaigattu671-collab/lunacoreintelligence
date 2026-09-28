@@ -17,10 +17,10 @@ export default function PartnerHomePage() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(59, 130, 246, 0.2)', color: '#60a5fa', padding: '0.35rem 0.85rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1.25rem', border: '1px solid rgba(59, 130, 246, 0.3)' }}>
               <Zap size={14} /> Lunacore Agency Partner Program
             </div>
-            <h1 style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem' }}>
+            <h1 style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem', color: '#ffffff' }}>
               Scale Your Agency With <span style={{ color: '#60a5fa' }}>Autonomous AI</span>
             </h1>
-            <p style={{ fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.6', marginBottom: '2rem' }}>
+            <p style={{ fontSize: '1.1rem', color: '#e2e8f0', lineHeight: '1.6', marginBottom: '2rem' }}>
               Deliver advanced AI assistants and automated enterprise workflows to your clients without internal R&D overhead. You own the client relationship; we handle 100% of the technical AI fulfillment.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -37,14 +37,14 @@ export default function PartnerHomePage() {
             <img 
               src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1000&auto=format&fit=crop" 
               alt="Business Partners Shaking Hands" 
-              style={{ width: '1005', height: '380px', objectFit: 'cover', display: 'block', filter: 'brightness(0.9)' }} 
+              style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block', filter: 'brightness(0.9)' }} 
             />
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)', padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <div style={{ background: '#2563eb', color: '#fff', padding: '0.5rem', borderRadius: '8px' }}>
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent)', padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ background: '#2563eb', color: '#fff', padding: '0.5rem', borderRadius: '8px', display: 'flex' }}>
                 <CheckCircle2 size={24} />
               </div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>15% Base Payouts + 8% Volume Bonus</div>
+                <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#ffffff' }}>15% Base Payouts + 8% Volume Bonus</div>
                 <div style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Built exclusively for high-performing technical agencies</div>
               </div>
             </div>
