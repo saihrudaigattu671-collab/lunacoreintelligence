@@ -63,9 +63,10 @@ export default function PricingPage() {
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0 }}>
                     <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Single Informative AI Agent</li>
                     <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Dynamic Website Chat Widget</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Instant Email Notifications</li>
+                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Tool Integrations </li>
                     <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Standard Knowledge Ingestion</li>
-                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> Monthly Performance Summary</li>
+                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} />  📊Weekly Performance Summary</li>
+                    <li style={{ display: 'flex', gap: '0.5rem', fontSize: '0.875rem' }}><Check size={16} style={{ color: 'var(--success)', shrink: 0 }} /> ⚠️ Weekly Customer Friction Report</li>
                   </ul>
                 </div>
 
